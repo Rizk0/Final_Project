@@ -1,0 +1,303 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>16/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sat Oct 29 19:21:49 EET 2022</td>
+</tr>
+<tr><td>Total time:</td><td>157 seconds (157769 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user checks product is in wishlist tab", "F08_Wishlist | user can add products to wishlist"</td>
+<td><div><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=106.0.5249.119)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-CE96ON1&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4a7fc20d77414ee9c3f8ef127aaf1209, findElement {using=css selector, value=div[class=bar-notification success]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:61096}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61096/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a7fc20d77414ee9c3f8ef127aaf1209
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.example1.pages.P03_homePage.SuccessMsg(P03_homePage.java:89)
+	at org.example1.stepDefs.D08_WishlistStepDefs.wishlistclick(D08_WishlistStepDefs.java:41)
+	at ?.user adds product to wishlist and opens wishlist tab(file:///C:/Users/Pc/IdeaProjects/Final_Project_Mohamed_Rizk/src/main/resources/Features/F08_Wishlist.feature:11)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace705825928", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace705825928'><pre>org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=106.0.5249.119)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#invalid_selector_exception
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-CE96ON1&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4a7fc20d77414ee9c3f8ef127aaf1209, findElement {using=css selector, value=div[class=bar-notification success]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:61096}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61096/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a7fc20d77414ee9c3f8ef127aaf1209
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.example1.pages.P03_homePage.SuccessMsg(P03_homePage.java:89)
+	at org.example1.stepDefs.D08_WishlistStepDefs.wishlistclick(D08_WishlistStepDefs.java:41)
+	at ?.user adds product to wishlist and opens wishlist tab(file:///C:/Users/Pc/IdeaProjects/Final_Project_Mohamed_Rizk/src/main/resources/Features/F08_Wishlist.feature:11)
+</pre></div></td>
+<td>5</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens rss link", "F07_followUs | users could open followUs links"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for number of open windows to be 2 (tried for 7 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-CE96ON1&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:61017}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61017/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a2744fea228cc1f16b48ffed05320d61
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example1.stepDefs.D07_followUsStepDefs.step6(D07_followUsStepDefs.java:65)
+	at ?.RSS link is opened in new tab(file:///C:/Users/Pc/IdeaProjects/Final_Project_Mohamed_Rizk/src/main/resources/Features/F07_followUs.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1974284481", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1974284481'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for number of open windows to be 2 (tried for 7 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-CE96ON1&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:61017}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61017/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a2744fea228cc1f16b48ffed05320d61
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example1.stepDefs.D07_followUsStepDefs.step6(D07_followUsStepDefs.java:65)
+	at ?.RSS link is opened in new tab(file:///C:/Users/Pc/IdeaProjects/Final_Project_Mohamed_Rizk/src/main/resources/Features/F07_followUs.feature:14)
+</pre></div></td>
+<td>13</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "guest user could register with valid data successfully", "F01_Register | users could register with new accounts"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.result&quot;}
+  (Session info: chrome=106.0.5249.119)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-CE96ON1&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [73e0f4b7e2684ab3331390911ca77eee, findElement {using=class name, value=result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:60679}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60679/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 73e0f4b7e2684ab3331390911ca77eee
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.example1.stepDefs.D01_registerStepDef.Step11(D01_registerStepDef.java:72)
+	at ?.success message is displayed(file:///C:/Users/Pc/IdeaProjects/Final_Project_Mohamed_Rizk/src/main/resources/Features/F01_Register.feature:16)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1332150216", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1332150216'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.result&quot;}
+  (Session info: chrome=106.0.5249.119)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.3.0&apos;, revision: &apos;a4995e2c09*&apos;
+System info: host: &apos;DESKTOP-CE96ON1&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_333&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [73e0f4b7e2684ab3331390911ca77eee, findElement {using=class name, value=result}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\Pc\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:60679}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60679/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 73e0f4b7e2684ab3331390911ca77eee
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.example1.stepDefs.D01_registerStepDef.Step11(D01_registerStepDef.java:72)
+	at ?.success message is displayed(file:///C:/Users/Pc/IdeaProjects/Final_Project_Mohamed_Rizk/src/main/resources/Features/F01_Register.feature:16)
+</pre></div></td>
+<td>19</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can search using sku", "F04_Search | user can use the search feature"</td>
+<td></td>
+<td>7</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can search using product name", "F04_Search | user can use the search feature"</td>
+<td></td>
+<td>7</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can search using sku", "F04_Search | user can use the search feature"</td>
+<td></td>
+<td>7</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can use the hover feature", "F05_hover | user can use the hover feature"</td>
+<td></td>
+<td>5</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Second slider is clickable on homepage", "F06_homeSliders | Sliders is clickable on homepage"</td>
+<td></td>
+<td>8</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens facebook link", "F07_followUs | users could open followUs links"</td>
+<td></td>
+<td>8</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens youtube link", "F07_followUs | users could open followUs links"</td>
+<td></td>
+<td>11</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can search using sku", "F04_Search | user can use the search feature"</td>
+<td></td>
+<td>8</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Guest User Can Change Currency To Euro", "F03_Currencies | user can change currency to euro"</td>
+<td></td>
+<td>6</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "First slider is clickable on homepage", "F06_homeSliders | Sliders is clickable on homepage"</td>
+<td></td>
+<td>5</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user opens twitter link", "F07_followUs | users could open followUs links"</td>
+<td></td>
+<td>7</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "users could use login functionality to use their accounts", "F02_Login | users could use login functionality to use their accounts"</td>
+<td></td>
+<td>7</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can search using product name", "F04_Search | user can use the search feature"</td>
+<td></td>
+<td>6</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user can search using product name", "F04_Search | user can use the search feature"</td>
+<td></td>
+<td>6</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user adds product to wishlist", "F08_Wishlist | user can add products to wishlist"</td>
+<td></td>
+<td>5</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+<tr>
+<td title='org.example1.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example1.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could login with invalid email and password", "F02_Login | users could use login functionality to use their accounts"</td>
+<td></td>
+<td>7</td>
+<td>org.example1.testRunner.runners@7cbd213e</td></tr>
+</table><p>
+</body>
+</html>
